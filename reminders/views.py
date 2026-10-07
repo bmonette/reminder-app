@@ -1,3 +1,10 @@
 from django.shortcuts import render
+from django.http import HttpResponse
 
-# Create your views here.
+from .models import Reminder
+
+
+def reminder_list(request):
+    reminders = Reminder.objects.all()
+
+    return HttpResponse("Reminder App")
