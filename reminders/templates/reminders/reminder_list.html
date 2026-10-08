@@ -1,3 +1,8 @@
 <h1>Reminder App</h1>
 
-<p>This page is coming from a Django template.</p>
+{% for reminder in reminders %}
+    <p>{{ reminder.reminder_text }}</p>
+    <p>{{ reminder.due_date }}</p>
+{% empty %}
+    <p>No reminders found.</p>
+{% endfor %}
