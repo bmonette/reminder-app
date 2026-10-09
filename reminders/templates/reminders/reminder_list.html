@@ -2,7 +2,11 @@
 
 <h2>Create a Reminder</h2>
 
-{{ form.as_p }}
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Save Reminder</button>
+</form>
 
 {% for reminder in reminders %}
     <p>{{ reminder.reminder_text }}</p>
