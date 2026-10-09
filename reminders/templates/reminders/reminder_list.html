@@ -1,5 +1,9 @@
 <h1>Reminder App</h1>
 
+<h2>Create a Reminder</h2>
+
+{{ form.as_p }}
+
 {% for reminder in reminders %}
     <p>{{ reminder.reminder_text }}</p>
     <p>{{ reminder.due_date }}</p>
